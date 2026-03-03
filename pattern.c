@@ -3,7 +3,7 @@
 //     int num;
 //     printf("Enter any number : ");
 //     scanf("%d",&num);
-    
+
 //     if(num%2==0){
 //         printf("Even");
 //     }
@@ -23,14 +23,13 @@
 //     printf("Enter third number : ");
 //     scanf("%d",&num3);
 
-
 //     if(num1>num2 && num1>num3){
 //         printf("%d is largest",num1);
 //     }
 //     else if (num2>num1 && num2>num3)
 //     {
 //         printf("%d is largest",num2);
-        
+
 //     }
 //     else{
 //         printf("%d is largest",num3);
@@ -82,18 +81,15 @@
 //     return 0;
 // }
 
-
 #include <stdio.h>
 
-int main() {
-    int i, j;
-
-    for(i = 1; i <= 5; i++) {
-        for(j = 1; j <= i; j++) {
+int main(){
+    int i, j, k, l;
+    for (i = 1; i <= 5; i++){
+        for (j = 1; j <= i; j++){
             printf("%d ", j);
         }
         printf("\n");
     }
-
     return 0;
 }
