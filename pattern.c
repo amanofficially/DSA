@@ -81,15 +81,62 @@
 //     return 0;
 // }
 
-#include <stdio.h>
 
-int main(){
-    int i, j, k, l;
-    for (i = 1; i <= 5; i++){
-        for (j = 1; j <= i; j++){
-            printf("%d ", j);
-        }
-        printf("\n");
+
+// Factorial of numbers 
+// #include <stdio.h>
+// int main(){
+//     int fact = 1,num;
+//     printf("Enter the number :- ");
+//     scanf("%d",&num);
+//     for(int i =1;i<=num;i++){
+//         fact*=i;
+//     }
+//     printf("Factorial of %d is :- %d ",num,fact);
+// }
+
+
+
+// Count the digits in a number 
+
+// #include <stdio.h>
+
+// int main(){
+//     int number, count = 0;
+
+//     printf("Enter the number :- ");
+//     scanf("%d", &number);
+
+//     for(; number != 0; number = number / 10){
+//         count++;
+//     }
+
+//     printf("Digits in a number :- %d", count);
+
+//     return 0;
+// }
+
+// Prime Number 
+#include<stdio.h>
+void main(){
+    int num,count=0;
+    printf("Enter the number :- ");
+    scanf("%d",&num);
+
+
+    for(int i=1;i<=num;i++){
+    if(num%i==0){
+        count++;
     }
-    return 0;
 }
+if (count==2)
+    {
+        printf("Prime number.");
+    }
+    else{
+        printf("Not a prime number.");
+
+    }
+}
+
+
