@@ -302,17 +302,67 @@
 
 
 
+// #include<stdio.h>
+// int main(){
+// int i ,j;
+
+// for(i=5; i>=1; i--){
+//     for(j=1; j<=i; j++){
+//         printf("* ");
+//     }
+//     printf("\n");
+// }
+// return 0;
+// }
+
+// #include<stdio.h>
+// int main(){
+// int i ,j,k;
+
+// for(i = 1; i <= 5; i++) {
+//     for(j = 1; j < i; j++) {
+//         printf(" ");
+//     }
+//         for(k = 1; k <= 6 - i; k++) {
+//             printf("* ");
+//         }
+//         printf("\n");
+// }
+// return 0;
+// }
+
+
+
+
+// #include<stdio.h>
+// int main(){
+//     int i,j;
+//     for(i=1; i<=5; i++){
+//         for(j=1; j<=i; j++){
+//             printf("* ");
+//         }
+//         printf("\n");
+//     }
+// }
+
+
 #include<stdio.h>
 int main(){
-int i ,j;
+    int i,j;
+    for(i=1;i<=4;i++){
+        
+        // spaces print
+        for(j=1;j<=4-i;j++){
+            printf(" ");
+        }
 
-for(i=5; i>=1; i--){
-    for(j=1; j<=i; j++){
-        printf("* ");
+        // stars print
+        for(j=1;j<=i;j++){
+            printf("* ");
+        }
+
+        printf("\n");
     }
-    printf("\n");
-}
-return 0;
-}
 
-
+    return 0;
+}
