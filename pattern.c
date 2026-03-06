@@ -117,26 +117,163 @@
 // }
 
 // Prime Number 
+// #include<stdio.h>
+// void main(){
+//     int num,count=0;
+//     printf("Enter the number :- ");
+//     scanf("%d",&num);
+
+
+//     for(int i=1;i<=num;i++){
+//     if(num%i==0){
+//         count++;
+//     }
+// }
+// if (count==2)
+//     {
+//         printf("Prime number.");
+//     }
+//     else{
+//         printf("Not a prime number.");
+
+//     }
+// }
+
+// Patterns
+
+// #include<stdio.h>
+// void main (){
+//     int i,j;
+//     for(i=1; i<=5; i++){
+//         for(j=1; j<=i; j++){
+//             printf("%d ",i);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// #include<stdio.h>
+// void main (){
+//     int i,j;
+//     for(i=1; i<=5; i++){
+//         for(j=1; j<=i; j++){
+//             printf("%d ",i);
+//         }
+//         printf("\n");
+//     }
+// }
+
+
+// #include<stdio.h>
+// void main (){
+//     int i,j;
+//     for(i=5; i>=1; i--){
+//         for(j=1; j<=i; j++){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+
+// #include<stdio.h>
+// void main (){
+//     int i,j;
+//     for(i=1; i<=5; i++){
+//         for(j=i; j<=5; j++){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+// }
+
+/*
+1
+12
+123
+1234
+12345
+1234
+123
+12
+1
+*/
+// #include<stdio.h>
+// int main (){
+//     int i,j;
+
+//     for(i = 1; i <= 9; i++){
+//     int limit;
+
+//     if(i <= 5)
+//         limit = i;
+//     else
+//         limit = 9 - i + 1;
+
+//     for(j = 1; j <= limit; j++){
+//             printf("%d ", j);
+//     }
+//     printf("\n");
+//     }
+//     return 0;
+// }
+
+
+// #include<stdio.h>
+// int main (){
+//     int i,j;
+
+//     // Increasing part
+//     for(i=1; i<=5; i++){
+//         for(j=1; j<=i; j++){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+
+//     // Decreasing part
+
+// for(int i=4; i>=1; i--){
+//     for(int j=1; j<=i; j++){
+//         printf("%d ",j);
+//     }
+//     printf("\n");
+// }
+//     return 0;
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     int i,j,limit;
+//     for(i=1; i<=9; i++){
+//         if(i<=5){
+//             limit = 6-i;
+//         }
+//         else{
+//             limit= i- 4;
+//         }
+//         for(j=1; j<=limit; j++){
+//             printf("%d ",j);
+//         }
+//         printf("\n");
+//     }
+//     return 0;
+// }
+
+
 #include<stdio.h>
-void main(){
-    int num,count=0;
-    printf("Enter the number :- ");
-    scanf("%d",&num);
+int main(){
+  int i , j;
+  char ch = 'A';
 
-
-    for(int i=1;i<=num;i++){
-    if(num%i==0){
-        count++;
+for(i=1; i<=5; i++){
+    for(j=0; j<i; j++){
+        printf("%c ",ch+j);
     }
+    printf("\n");
 }
-if (count==2)
-    {
-        printf("Prime number.");
-    }
-    else{
-        printf("Not a prime number.");
-
-    }
+return 0;
 }
 
 
