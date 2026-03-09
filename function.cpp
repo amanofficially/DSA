@@ -7,7 +7,7 @@ int sum(int n){
         sum += i;
     }
     return sum;
-}
+} 
 
 int factorial(int num){
     int fact = 1;
@@ -15,10 +15,24 @@ int factorial(int num){
         fact *= i;
     }
     return fact;
+} 
+
+int sumOfDigits(int num){
+    int digitSum = 0;
+
+    while(num > 0){
+        int lastDigit = num % 10;
+        digitSum += lastDigit;
+        num = num / 10;
+    }
+
+    return digitSum;
 }
 
 int main (){
     cout<<"Sum :- "<<sum(5)<<endl;
-    cout<<"Factorial :- "<<factorial(5);
+    cout<<"Factorial :- "<<factorial(5)<<endl;
+    cout<<"Sum of digits :- "<<sumOfDigits(1234);
+
     return 0;
 }
