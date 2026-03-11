@@ -409,16 +409,57 @@
 // }
 
 
+// #include<stdio.h>
+// int main(){
+//     int i,j;
+//     int num = 1;
+//     for(i=1;i<=5;i++){
+//         for(j=1;j<=i;j++){
+//             printf("%d ",num);
+//             num++;
+//         }
+//         printf("\n");
+//     }
+// return 0;
+// }
+
+
+
+// #include<stdio.h>
+// int main(){
+//     int i,j;
+//     char ch = 'A';
+//     for(i=1; i<=5; i++){
+//         for(j=1;j<=i;j++){
+//             printf("%c ",ch);
+//         }
+//         ch++;
+//         printf("\n");
+//     }
+// return 0;
+// }
 #include<stdio.h>
 int main(){
-    int i,j;
-    int num = 1;
-    for(i=1;i<=5;i++){
-        for(j=1;j<=i;j++){
-            printf("%d ",num);
-            num++;
+    int i,j,k;
+    int star, space;
+    for(i=1; i<=9; i++){
+        if(i<=5){
+            star=2*i-1;
+            space = 5-i;
+        }
+        else{
+            star=2*(9-i)+1;
+            space = i-5;
+        }
+        for(j=1; j<=space; j++){
+            printf(" ");
+        }
+        //stars
+        for(k=1; k<=star; k++){
+            printf("*");
         }
         printf("\n");
+
     }
 return 0;
 }
