@@ -510,9 +510,50 @@
 // }
 
 
+// #include<stdio.h>
+
+// int main(){
+//     int arr[5] = {10,20,30,40,50};
+//     int start = 0;
+//     int end = 4;
+//     int mid, key;
+
+//     printf("Enter element to search: ");
+//     scanf("%d",&key);
+
+//     while(start <= end){
+//         mid = (start + end) / 2;
+
+//         if(arr[mid] == key){
+//             printf("Element found at index %d", mid);
+//             return 0;
+//         }
+//         else if(key > arr[mid]){
+//             start = mid + 1;
+//         }
+//         else{
+//             end = mid - 1;
+//         }
+//     }
+
+//     printf("Element not found");
+//     return 0;
+// }
+
 #include<stdio.h>
+
 int main(){
-    int arr[5] = {10,20,30,40,50};
+    int n, a = 0, b = 1, c;
 
+    printf("Enter number of terms: ");
+    scanf("%d",&n);
 
+    for(int i=1; i<=n; i++){
+        printf("%d ", a);
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    return 0;
 }
