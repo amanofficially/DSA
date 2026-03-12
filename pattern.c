@@ -438,29 +438,81 @@
 //     }
 // return 0;
 // }
+// #include<stdio.h>
+// int main(){
+//     int i,j,k;
+//     int star, space;
+//     for(i=1; i<=9; i++){
+//         if(i<=5){
+//             star=2*i-1;
+//             space = 5-i;
+//         }
+//         else{
+//             star=2*(9-i)+1;
+//             space = i-5;
+//         }
+//         for(j=1; j<=space; j++){
+//             printf(" ");
+//         }
+//         //stars
+//         for(k=1; k<=star; k++){
+//             printf("*");
+//         }
+//         printf("\n");
+
+//     }
+// return 0;
+// }
+
+
+
+// #include<stdio.h>
+// int main(){
+//     int i,j;
+
+// return 0;
+// }
+
+
+
+// #include<stdio.h>
+// #include<string.h>
+// int main (){
+//     char str[100];
+//     int len,i;
+//     printf("Enter the string :- ");
+//     scanf("%s",str);
+//     len = strlen(str);
+//     for(i=len-1; i>=0; i--){
+//         printf("%c",str[i]);
+//     }
+// return 0;
+// }
+
+
+// #include<stdio.h>
+// #include<string.h>
+// int main (){
+//     int i,j;
+//     for(i=1; i<=4; i++){
+//         for(j=1; j<=4; j++){
+//             if(i==1||i==4 || i+j==5){
+//                 printf("* ");
+//             }
+//             else{
+//                 printf("  ");
+//             }
+//         }
+//         printf("\n");
+
+//     }
+// return 0;
+// }
+
+
 #include<stdio.h>
 int main(){
-    int i,j,k;
-    int star, space;
-    for(i=1; i<=9; i++){
-        if(i<=5){
-            star=2*i-1;
-            space = 5-i;
-        }
-        else{
-            star=2*(9-i)+1;
-            space = i-5;
-        }
-        for(j=1; j<=space; j++){
-            printf(" ");
-        }
-        //stars
-        for(k=1; k<=star; k++){
-            printf("*");
-        }
-        printf("\n");
+    int arr[5] = {10,20,30,40,50};
 
-    }
-return 0;
+
 }
-
