@@ -540,19 +540,44 @@
 //     return 0;
 // }
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
-    int n, a = 0, b = 1, c;
+// int main(){
+//     int n, a = 0, b = 1, c;
 
-    printf("Enter number of terms: ");
-    scanf("%d",&n);
+//     printf("Enter number of terms: ");
+//     scanf("%d",&n);
 
-    for(int i=1; i<=n; i++){
-        printf("%d ", a);
-        c = a + b;
-        a = b;
-        b = c;
+//     for(int i=1; i<=n; i++){
+//         printf("%d ", a);
+//         c = a + b;
+//         a = b;
+//         b = c;
+//     }
+
+//     return 0;
+// }
+
+
+#include <stdio.h>
+
+int main() {
+    int arr[5] = {5, 2, 9, 1, 3};
+    int i, j, temp;
+
+    for(i = 0; i < 5 - 1; i++) {
+        for(j = 0; j < 5 - i - 1; j++) {
+            if(arr[j] > arr[j + 1]) {
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("Sorted array: ");
+    for(i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
     }
 
     return 0;
