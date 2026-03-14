@@ -1,0 +1,3 @@
+else{
+            printf("Element is not present in the array.");
+        }
