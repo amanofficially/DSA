@@ -1,10 +1,19 @@
 #include <stdio.h>
 
+// Print Array
+void printArray(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
 // Bubble Sort
 void bubbleSort(int arr[], int n)
 {
     int i, j, temp;
-
     for (i = 0; i < n - 1; i++)
     {
         for (j = 0; j < n - i - 1; j++)
@@ -62,23 +71,98 @@ void insertionSort(int arr[], int n)
     }
 }
 
-// Print Array
-void printArray(int arr[], int n)
+// Quick Sort
+int partition(int arr[], int low, int high)
 {
-    int i;
-    for (i = 0; i < n; i++)
+    int pivot = arr[high];
+    int i = low - 1, temp;
+
+    for (int j = low; j < high; j++)
     {
-        printf("%d ", arr[i]);
+        if (arr[j] < pivot)
+        {
+            i++;
+            temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
     }
-    printf("\n");
+
+    temp = arr[i + 1];
+    arr[i + 1] = arr[high];
+    arr[high] = temp;
+
+    return i + 1;
 }
 
-// Main Function
+void quickSort(int arr[], int low, int high)
+{
+    if (low < high)
+    {
+        int pi = partition(arr, low, high);
+
+        quickSort(arr, low, pi - 1);
+        quickSort(arr, pi + 1, high);
+    }
+}
+
+// Merge Sort
+void merge(int arr[], int l, int m, int r)
+{
+    int i = l;
+    int j = m + 1;
+    int k = 0;
+    int temp[100];
+
+    while (i <= m && j <= r)
+    {
+        if (arr[i] < arr[j])
+        {
+            temp[k++] = arr[i++];
+        }
+        else
+        {
+            temp[k++] = arr[j++];
+        }
+    }
+
+    while (i <= m)
+    {
+        temp[k++] = arr[i++];
+    }
+
+    while (j <= r)
+    {
+        temp[k++] = arr[j++];
+    }
+
+    for (i = l, k = 0; i <= r; i++, k++)
+    {
+        arr[i] = temp[k];
+    }
+}
+
+void mergeSort(int arr[], int l, int r)
+{
+    if (l < r)
+    {
+        int m = (l + r) / 2;
+
+        mergeSort(arr, l, m);
+        mergeSort(arr, m + 1, r);
+
+        merge(arr, l, m, r);
+    }
+}
+
 int main()
 {
+
     int arr1[] = {5, 3, 8, 1, 2};
     int arr2[] = {5, 3, 8, 1, 2};
     int arr3[] = {5, 3, 8, 1, 2};
+    int arr4[] = {5, 3, 8, 1, 2};
+    int arr5[] = {5, 3, 8, 1, 2};
 
     int n = 5;
 
@@ -93,6 +177,14 @@ int main()
     insertionSort(arr3, n);
     printf("Insertion Sort: ");
     printArray(arr3, n);
+
+    quickSort(arr4, 0, n - 1);
+    printf("Quick Sort: ");
+    printArray(arr4, n);
+
+    mergeSort(arr5, 0, n - 1);
+    printf("Merge Sort: ");
+    printArray(arr5, n);
 
     return 0;
 }
