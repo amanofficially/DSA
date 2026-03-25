@@ -123,35 +123,34 @@
 //     }
 // }
 
-int removeDuplicates(int arr[], int n)
-{
-    if (n == 0)
-        return 0;
-
-    int j = 0;
-
-    for (int i = 1; i < n; i++)
-    {
-        if (arr[i] != arr[j])
-        {
-            j++;
-            arr[j] = arr[i];
-        }
-    }
-
-    return j + 1;
-}
+#include <stdio.h>
 
 int main()
 {
-    int arr[] = {1, 1, 2, 2, 3};
-    int n = 5;
+    int arr[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}};
 
-    int newSize = removeDuplicates(arr, n);
+    int result[3][3];
 
-    for (int i = 0; i < newSize; i++)
+    // rotation logic
+    for (int i = 0; i < 3; i++)
     {
-        printf("%d ", arr[i]);
+        for (int j = 0; j < 3; j++)
+        {
+            result[i][j] = arr[j][3 - 1 - i];
+        }
+    }
+
+    // print result
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            printf("%d ", result[i][j]);
+        }
+        printf("\n");
     }
 
     return 0;
