@@ -69,35 +69,90 @@
 //     printf("Even count :- %d\nOdd count :- %d", even, odd);
 // }
 
-void sortedOrNot(int arr[], int len)
+// void sortedOrNot(int arr[], int len)
+// {
+//     for (int i = 0; i < len - 1; i++)
+//     {
+//         if (arr[i] > arr[i + 1])
+//         {
+//             printf("Not Sorted");
+//             return;
+//         }
+//     }
+//     printf("Sorted");
+// }
+
+// void secondLargest(int arr[], int len)
+// {
+//     int count = 0;
+//     for (int i = 0; i < len; i++)
+//     {
+//         int count = 0;
+
+//         for (int j = 0; j < len; j++)
+//         {
+//             if (arr[j] > arr[i])
+//             {
+//                 count++;
+//             }
+//         }
+
+//         if (count == 1)
+//         {
+//             printf("Second Largest: %d\n", arr[i]);
+//         }
+//         else if (count == 0)
+//         {
+//             printf("Largest: %d", arr[i]);
+//         }
+//     }
+// }
+
+// int uniqueArray(int arr[], int len)
+// {
+//     int unique[5];
+//     for (int i = 0; i < len; i++)
+//     {
+//         for (int j = 0; j < len; j++)
+//         {
+//             if (arr[i] == arr[j])
+//             {
+
+//             }
+//         }
+//     }
+// }
+
+int removeDuplicates(int arr[], int n)
 {
-    int flag;
-    for (int i = 0; i < len - 1; i++)
+    if (n == 0)
+        return 0;
+
+    int j = 0;
+
+    for (int i = 1; i < n; i++)
     {
-        if (arr[i] < arr[i + 1])
+        if (arr[i] != arr[j])
         {
-            flag = 1;
-        }
-        else
-        {
-            flag = 0;
+            j++;
+            arr[j] = arr[i];
         }
     }
-    if (flag == 1)
-    {
-        printf("Sorted");
-    }
-    else
-    {
-        printf("Not Sorted");
-    }
+
+    return j + 1;
 }
 
 int main()
 {
-    int arr[] = {1, 2, 6, 3, 4, 5};
-    int lenght = 6;
-    sortedOrNot(arr, lenght);
+    int arr[] = {1, 1, 2, 2, 3};
+    int n = 5;
+
+    int newSize = removeDuplicates(arr, n);
+
+    for (int i = 0; i < newSize; i++)
+    {
+        printf("%d ", arr[i]);
+    }
 
     return 0;
 }
