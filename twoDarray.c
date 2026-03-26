@@ -214,7 +214,7 @@
 //             }
 //         }
 //     }
-//     printf("Sum of Primary Diagonal :- %d", sum);
+//     printf("Sum of Secondary Diagonal :- %d", sum);
 // }
 
 // ----------------------------- 2 --------------------------------
@@ -223,7 +223,6 @@
 // void main()
 // {
 //     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-//     int sum = 0;
 //     printf("Transpose of Matrix -\n");
 //     for (int i = 0; i < 3; i++)
 //     {
@@ -255,15 +254,32 @@
 
 // ----------------------------- 4 --------------------------------
 
+// #include <stdio.h>
+// void main()
+// {
+//     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+//     printf("Reverse of each column of an Matrix -\n");
+//     for (int i = 2; i >= 0; i--)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             printf("%d ", arr[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// ----------------------------- 5 --------------------------------
+
 #include <stdio.h>
 void main()
 {
     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int sum = 0;
-    printf("Reverse of each row of an Matrix -\n");
-    for (int i = 0; i < 3; i++)
+    int key = 6;
+
+    for (int i = 2; i >= 0; i--)
     {
-        for (int j = 2; j >= 0; j--)
+        for (int j = 0; j < 3; j++)
         {
             printf("%d ", arr[i][j]);
         }
