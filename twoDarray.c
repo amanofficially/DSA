@@ -275,14 +275,21 @@
 void main()
 {
     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int key = 6;
-
-    for (int i = 2; i >= 0; i--)
+    int key = 8;
+    int ans = 0;
+    for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%d ", arr[i][j]);
+            if (arr[i][j] == key)
+            {
+                printf("%d Founded at position\nrow :- %d\ncolumn:- %d", key, i + 1, j + 1);
+                ans = 1;
+            }
         }
-        printf("\n");
+    }
+    if (ans == 0)
+    {
+        printf("Not found.");
     }
 }
