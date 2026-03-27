@@ -1,7 +1,4 @@
 #include <stdio.h>
-
-// ======================= EASY LEVEL =======================
-
 // 1
 void printRowWise(int arr[3][3])
 {
@@ -128,8 +125,6 @@ void totalSum(int arr[3][3])
     printf("10. Total Sum = %d\n", sum);
 }
 
-// ======================= MEDIUM LEVEL =======================
-
 // 1
 void sumPrimaryDiagonal(int arr[3][3])
 {
@@ -211,13 +206,9 @@ void searchElement(int arr[3][3])
     printf("Not Found\n");
 }
 
-// ======================= MAIN =======================
-
 int main()
 {
     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-
-    printf("========== EASY LEVEL ==========\n\n");
 
     printRowWise(arr);
     printf("\n");
@@ -238,8 +229,6 @@ int main()
     printDiagonal(arr);
     printf("\n");
     totalSum(arr);
-
-    printf("\n\n========== MEDIUM LEVEL ==========\n\n");
 
     sumPrimaryDiagonal(arr);
     printf("\n");
