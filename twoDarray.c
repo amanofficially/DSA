@@ -1,199 +1,200 @@
 #include <stdio.h>
 
-// ---------------------------- 1 ---------------------------------
+// ======================= EASY LEVEL =======================
 
-void printMatrix(int arr[3][3])
+// 1
+void printRowWise(int arr[3][3])
 {
-    printf("Printing All Elements of Matrix -\n");
+    printf("1. Row-wise:\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
-        {
             printf("%d ", arr[i][j]);
-        }
         printf("\n");
     }
 }
 
-// ---------------------------- 2 ---------------------------------
-
-void transposeMatrix(int arr[3][3])
+// 2
+void printColumnWise(int arr[3][3])
 {
-    printf("Transpose of Matrix-\n");
+    printf("2. Column-wise:\n");
     for (int i = 0; i < 3; i++)
     {
         for (int j = 0; j < 3; j++)
-        {
             printf("%d ", arr[j][i]);
-        }
         printf("\n");
     }
 }
 
-// ---------------------------- 3 ---------------------------------
-
+// 3
 void rowSum(int arr[3][3])
 {
+    printf("3. Row Sum:\n");
     for (int i = 0; i < 3; i++)
     {
         int sum = 0;
         for (int j = 0; j < 3; j++)
-        {
             sum += arr[i][j];
-        }
-        printf("Sum of %d row is:- %d\n", i + 1, sum);
+
+        printf("Row %d = %d\n", i + 1, sum);
     }
 }
 
-// ---------------------------- 4 ---------------------------------
-
+// 4
 void columnSum(int arr[3][3])
 {
+    printf("4. Column Sum:\n");
     for (int i = 0; i < 3; i++)
     {
         int sum = 0;
         for (int j = 0; j < 3; j++)
-        {
             sum += arr[j][i];
-        }
-        printf("Sum of %d column is:- %d\n", i + 1, sum);
+
+        printf("Column %d = %d\n", i + 1, sum);
     }
 }
 
-// ---------------------------- 5 ---------------------------------
-
+// 5
 void maxElement(int arr[3][3])
 {
     int max = arr[0][0];
 
     for (int i = 0; i < 3; i++)
-    {
         for (int j = 0; j < 3; j++)
-        {
             if (arr[i][j] > max)
-            {
                 max = arr[i][j];
-            }
-        }
-    }
-    printf("Max Element in 2D Array is :- %d\n", max);
+
+    printf("5. Max Element = %d\n", max);
 }
 
-// ---------------------------- 6 ---------------------------------
-
+// 6
 void minElement(int arr[3][3])
 {
     int min = arr[0][0];
 
     for (int i = 0; i < 3; i++)
-    {
         for (int j = 0; j < 3; j++)
-        {
             if (arr[i][j] < min)
-            {
                 min = arr[i][j];
-            }
-        }
-    }
-    printf("Min Element in 2D Array is :- %d\n", min);
+
+    printf("6. Min Element = %d\n", min);
 }
 
-// ---------------------------- 7 ---------------------------------
-
-void countEvenOdd(int arr[3][3])
+// 7
+void countEven(int arr[3][3])
 {
-    int even = 0;
-    int odd = 0;
+    int count = 0;
 
     for (int i = 0; i < 3; i++)
-    {
         for (int j = 0; j < 3; j++)
-        {
             if (arr[i][j] % 2 == 0)
-            {
-                even++;
-            }
-            else
-            {
-                odd++;
-            }
-        }
-    }
+                count++;
 
-    printf("Total Even Numbers :- %d\n", even);
-    printf("Total Odd Numbers :- %d\n", odd);
+    printf("7. Even Count = %d\n", count);
 }
 
-// ---------------------------- 8 ---------------------------------
+// 8
+void countOdd(int arr[3][3])
+{
+    int count = 0;
 
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            if (arr[i][j] % 2 != 0)
+                count++;
+
+    printf("8. Odd Count = %d\n", count);
+}
+
+// 9
 void printDiagonal(int arr[3][3])
 {
-    printf("Diagonal Elements Are -\n");
-
+    printf("9. Diagonal Elements:\n");
     for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            if (i == j)
-            {
-                printf("%d\n", arr[i][j]);
-            }
-        }
-    }
+        printf("%d ", arr[i][i]);
+
+    printf("\n");
 }
 
-// ---------------------------- 9 ---------------------------------
-
+// 10
 void totalSum(int arr[3][3])
 {
     int sum = 0;
 
     for (int i = 0; i < 3; i++)
-    {
         for (int j = 0; j < 3; j++)
-        {
             sum += arr[i][j];
-        }
-    }
-    printf("Sum of all Elements :- %d\n", sum);
+
+    printf("10. Total Sum = %d\n", sum);
 }
 
-// ---------------------------- 10 ---------------------------------
+// ======================= MEDIUM LEVEL =======================
 
+// 1
+void sumPrimaryDiagonal(int arr[3][3])
+{
+    int sum = 0;
+    for (int i = 0; i < 3; i++)
+        sum += arr[i][i];
+
+    printf("1. Primary Diagonal Sum = %d\n", sum);
+}
+
+// 2
+void sumSecondaryDiagonal(int arr[3][3])
+{
+    int sum = 0;
+    for (int i = 0; i < 3; i++)
+        sum += arr[i][2 - i];
+
+    printf("2. Secondary Diagonal Sum = %d\n", sum);
+}
+
+// 3
+void transposeMatrix(int arr[3][3])
+{
+    printf("3. Transpose Matrix:\n");
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 3; j++)
+            printf("%d ", arr[j][i]);
+        printf("\n");
+    }
+}
+
+// 4
 void reverseRows(int arr[3][3])
 {
-    printf("Reverse of each row of an Matrix -\n");
+    printf("4. Reverse Rows:\n");
+
     for (int i = 0; i < 3; i++)
     {
         for (int j = 2; j >= 0; j--)
-        {
             printf("%d ", arr[i][j]);
-        }
         printf("\n");
     }
 }
 
-// ---------------------------- 11 ---------------------------------
-
+// 5
 void reverseColumns(int arr[3][3])
 {
-    printf("Reverse of each column of an Matrix -\n");
+    printf("5. Reverse Columns:\n");
+
     for (int i = 2; i >= 0; i--)
     {
         for (int j = 0; j < 3; j++)
-        {
             printf("%d ", arr[i][j]);
-        }
         printf("\n");
     }
 }
 
-// ---------------------------- 12 ---------------------------------
-
+// 6
 void searchElement(int arr[3][3])
 {
     int key = 8;
-    int ans = 0;
+
+    printf("6. Search Element:\n");
 
     for (int i = 0; i < 3; i++)
     {
@@ -201,72 +202,56 @@ void searchElement(int arr[3][3])
         {
             if (arr[i][j] == key)
             {
-                printf("%d Founded at position\nrow :- %d\ncolumn:- %d\n", key, i + 1, j + 1);
-                ans = 1;
+                printf("Found %d at (%d, %d)\n", key, i + 1, j + 1);
+                return;
             }
         }
     }
 
-    if (ans == 0)
-    {
-        printf("Not found.\n");
-    }
+    printf("Not Found\n");
 }
 
-// ---------------------------- 13 ---------------------------------
+// ======================= MAIN =======================
 
-void spiralMtrix(int arr[3][3])
-{
-    for (int i = 0; i < 3; i++)
-    {
-        for (int j = 0; j < 3; j++)
-        {
-            printf("%d ", arr[i][j]);
-        }
-    }
-}
-
-// ---------------------------- MAIN ---------------------------------
-
-void main()
+int main()
 {
     int arr[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
 
-    printMatrix(arr);
-    printf("\n");
+    printf("========== EASY LEVEL ==========\n\n");
 
-    transposeMatrix(arr);
+    printRowWise(arr);
     printf("\n");
-
+    printColumnWise(arr);
+    printf("\n");
     rowSum(arr);
     printf("\n");
-
     columnSum(arr);
     printf("\n");
-
     maxElement(arr);
     printf("\n");
-
     minElement(arr);
     printf("\n");
-
-    countEvenOdd(arr);
+    countEven(arr);
     printf("\n");
-
+    countOdd(arr);
+    printf("\n");
     printDiagonal(arr);
     printf("\n");
-
     totalSum(arr);
-    printf("\n");
 
+    printf("\n\n========== MEDIUM LEVEL ==========\n\n");
+
+    sumPrimaryDiagonal(arr);
+    printf("\n");
+    sumSecondaryDiagonal(arr);
+    printf("\n");
+    transposeMatrix(arr);
+    printf("\n");
     reverseRows(arr);
     printf("\n");
-
     reverseColumns(arr);
     printf("\n");
-
     searchElement(arr);
-    printf("\n");
 
-    spiralMtrix(arr);
+    return 0;
 }
