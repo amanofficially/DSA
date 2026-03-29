@@ -241,7 +241,6 @@ int main()
     reverseColumns(arr);
     printf("\n");
     searchElement(arr);
-    printf("\n");
 
     return 0;
 }
