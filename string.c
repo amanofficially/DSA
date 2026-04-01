@@ -10,31 +10,28 @@
 //     }
 // }
 
-#include <stdio.h>
+// #include <stdio.h>
+// #include <string.h>
 
-void reverse(char str[])
-{
-    int i, length = 0;
-    char temp;
+// int main()
+// {
+//     char str[] = "Welcome to TCS";
+//     int i = 0;
+//     int j = strlen(str) - 1;
+//     char temp;
 
-    while (str[length] != '\0')
-    {
-        length++;
-    }
+//     while (i < j)
+//     {
+//         temp = str[i];
+//         str[i] = str[j];
+//         str[j] = temp;
 
-    for (i = 0; i < length / 2; i++)
-    {
-        temp = str[i];
-        str[i] = str[length - i - 1];
-        str[length - i - 1] = temp;
-    }
+//         i++;
+//         j--;
+//     }
 
-    printf("Reversed string: %s", str);
-}
+//     printf("Reversed string: %s", str);
 
-int main()
-{
-    char str[] = "Programming";
-    reverse(str);
-    return 0;
-}
+//     return 0;
+// }
+
