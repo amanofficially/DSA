@@ -89,17 +89,50 @@ void isSorted(int arr[], int n)
     }
 }
 
+//...DuplicateRemoveing
+
+int removeDuplicates(int arr[], int n)
+{
+    if (n == 0)
+        return 0;
+
+    int j = 0;
+
+    for (int i = 1; i < n; i++)
+    {
+        if (arr[i] != arr[j])
+        {
+            j++;
+            arr[j] = arr[i];
+        }
+    }
+
+    return j + 1;
+}
+
 // ...main
 int main()
 {
-    int arr[] = {10, 20, 30, 40, 50};
-    int arr1[] = {10, 20, 30, 40, 50};
-    int size = 5;
+    // int arr[] = {10, 20, 30, 40, 50};
+    // int arr1[] = {10, 20, 30, 40, 50};
+    // int size = 5;
 
-    maxElement(arr, size);
-    revArray(arr, size);
-    secondLargest(arr, size);
-    isSorted(arr1, size);
+    // maxElement(arr, size);
+    // revArray(arr, size);
+    // secondLargest(arr, size);
+    // isSorted(arr1, size);
+
+    int removeDuplicates(int arr[], int n);
+
+    int duplicateArray[] = {1, 1, 2, 2, 3, 4, 4};
+    int n = sizeof(duplicateArray) / sizeof(duplicateArray[0]);
+
+    int newSize = removeDuplicates(duplicateArray, n);
+
+    for (int i = 0; i < newSize; i++)
+    {
+        printf("%d ", duplicateArray[i]);
+    }
 
     return 0;
 }
