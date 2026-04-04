@@ -110,6 +110,17 @@ int removeDuplicates(int arr[], int n)
     return j + 1;
 }
 
+// ...Zero to end
+void moveZeros(int arr[], int n)
+{
+    int pos = 0;
+    for (int i = 0; i < n; i++)
+        if (arr[i] != 0)
+            arr[pos++] = arr[i];
+    while (pos < n)
+        arr[pos++] = 0;
+}
+
 // ...main
 int main()
 {
@@ -122,17 +133,23 @@ int main()
     // secondLargest(arr, size);
     // isSorted(arr1, size);
 
-    int removeDuplicates(int arr[], int n);
+    // int removeDuplicates(int arr[], int n);
 
-    int duplicateArray[] = {1, 1, 2, 2, 3, 4, 4};
-    int n = sizeof(duplicateArray) / sizeof(duplicateArray[0]);
+    // int duplicateArray[] = {1, 1, 2, 2, 3, 4, 4};
+    // int n = sizeof(duplicateArray) / sizeof(duplicateArray[0]);
 
-    int newSize = removeDuplicates(duplicateArray, n);
+    // int newSize = removeDuplicates(duplicateArray, n);
 
-    for (int i = 0; i < newSize; i++)
-    {
-        printf("%d ", duplicateArray[i]);
-    }
+    // for (int i = 0; i < newSize; i++)
+    // {
+    //     printf("%d ", duplicateArray[i]);
+    // }
+
+    int arr[] = {0, 1, 0, 3, 12};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    moveZeros(arr, n);
+    for (int i = 0; i < n; i++)
+        printf("%d ", arr[i]);
 
     return 0;
 }
