@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-void swap(int, int);
-
-void swap(int x, int y)
+void swap(int *x, int *y)
 {
-    printf("Before Swaping:\n a = %d\n b = %d\n", x, y);
-
     int temp;
-    temp = x;
-    x = y;
-    y = temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 
-    printf("After Swaping:\n a = %d\n b = %d\n", x, y);
+    printf("Inside function:\n x = %d, y = %d\n", *x, *y);
 }
 
 int main()
 {
+    int a = 3, b = 4;
 
-    swap(3, 4);
+    swap(&a, &b);
+
+    printf("Outside function:\n a = %d, b = %d", a, b);
 }
