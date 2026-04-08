@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-int printRevNumbers(int n)
+int factorial(int n)
 {
-    if (n == 1)
+    if (n == 0)
         return 1;
 
-    printf("%d ", n);
-    return printRevNumbers(n - 1);
+    return n * factorial(n - 1);
 }
 
 int main()
 {
-    int n = 100;
-    int result = printRevNumbers(n);
+    int num = 5;
+    int result = factorial(num);
     printf("%d", result);
 }
