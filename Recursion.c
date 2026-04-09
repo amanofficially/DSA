@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int factorial(int n)
+int naturalNumbers(int n)
 {
-    if (n == 0)
-        return 1;
+    if (n == 11)
+        return 0;
 
-    return n * factorial(n - 1);
+    printf("%d\n", n);
+    naturalNumbers(n + 1);
 }
 
 int main()
 {
-    int num = 5;
-    int result = factorial(num);
-    printf("%d", result);
+    naturalNumbers(1);
+    return 0;
 }
