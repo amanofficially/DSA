@@ -162,7 +162,6 @@ void deleteElement()
 }
 
 // 9
-
 void insertElement()
 {
     int index, num, i;
@@ -197,10 +196,32 @@ void insertElement()
     }
 }
 
+// 10
+
+void secondHighElement(int arr[], int size)
+{
+    int max = arr[0];
+    int secondMax = arr[0];
+
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > max)
+        {
+            secondMax = max;
+            max = arr[i];
+        }
+        else if (arr[i] > secondMax && arr[i] != max)
+        {
+            secondMax = arr[i];
+        }
+    }
+    printf("Second Max Element in Array:- %d", secondMax);
+}
+
 // main function
 int main()
 {
-    int arr[] = {10, 43, 60, 40, 25};
+    int arr[] = {10, 50, 60, 40, 25};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     // printArray(arr, size);
@@ -211,6 +232,7 @@ int main()
     // countEvenOdd(arr, size);
     // searchEle(arr, size);
     // deleteElement();
-    insertElement();
+    // insertElement();
+    secondHighElement(arr, size);
     return 0;
 }
