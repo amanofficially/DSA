@@ -1,6 +1,2 @@
-printArray(arr, size);
-    // sumOfArray(arr, size);
-    // maxElement(arr, size);
-    // minElement(arr, size);
-    // revArray(arr, size);
-    // countEvenOdd(arr, size);
+printf("Enter the size/number of elements you want in array");
+    scanf("%d", size);
