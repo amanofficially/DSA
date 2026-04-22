@@ -17,7 +17,7 @@ void sumOfArray(int arr[], int size)
     {
         sum += arr[i];
     }
-    printf("\nSum of all elements :- %d", sum);
+    printf("\n\nSum of all elements :- %d", sum);
 }
 
 // 3
@@ -32,7 +32,7 @@ void maxElement(int arr[], int size)
             max = arr[i];
         }
     }
-    printf("\nMax element of array :- %d", max);
+    printf("\n\nMax element of array :- %d", max);
 }
 
 // 4
@@ -46,7 +46,7 @@ void minElement(int arr[], int size)
             min = arr[i];
         }
     }
-    printf("\nMin element of array :- %d", min);
+    printf("\n\nMin element of array :- %d", min);
 }
 
 // 5
@@ -63,23 +63,73 @@ void revArray(int arr[], int size)
         end--;
     }
 
-    printf("\nReversed Array : ");
+    printf("\n\nReversed Array : ");
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
     }
 }
 
+void countEvenOdd(int arr[], int size)
+{
+    int even, odd;
+    even = 0;
+    odd = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] % 2 == 0)
+        {
+            even++;
+        }
+        else
+        {
+            odd++;
+        }
+    }
+    printf("\n\nOdd Even count in a given array");
+    printf("\nEven number:- %d\nOdd numbers:- %d", even, odd);
+}
+
+void searchEle(int arr[], int size)
+{
+    int key, i;
+    int flag = 0;
+
+    printf("\n\nEnter the number you want to search: ");
+    scanf("%d", &key);
+
+    for (i = 0; i < size; i++)
+    {
+        if (arr[i] == key)
+        {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 1)
+    {
+        printf("%d is present at index %d", key, i);
+    }
+    else
+    {
+        printf("Number is not present.");
+    }
+}
+
 // main function
 int main()
 {
-    int arr[] = {10, 20, 60, 40, 50};
+    int arr[] = {10, 20, 60, 40, 25};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    printArray(arr, size);
-    sumOfArray(arr, size);
-    maxElement(arr, size);
-    minElement(arr, size);
-    revArray(arr, size);
+    // printArray(arr, size);
+    // sumOfArray(arr, size);
+    // maxElement(arr, size);
+    // minElement(arr, size);
+    // revArray(arr, size);
+    // countEvenOdd(arr, size);
+    searchEle(arr, size);
     return 0;
 }
