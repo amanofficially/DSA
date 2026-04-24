@@ -233,6 +233,6 @@ int main()
     // searchEle(arr, size);
     // deleteElement();
     // insertElement();
-    secondHighElement(arr, size);
+    // secondHighElement(arr, size); 
     return 0;
 }
