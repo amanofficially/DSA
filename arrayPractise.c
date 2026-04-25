@@ -226,13 +226,6 @@ int main()
 
     // printArray(arr, size);
     // sumOfArray(arr, size);
-    // maxElement(arr, size);
-    // minElement(arr, size);
-    // revArray(arr, size);
-    // countEvenOdd(arr, size);
-    // searchEle(arr, size);
-    // deleteElement();
-    // insertElement();
-    // secondHighElement(arr, size); 
+    
     return 0;
 }
