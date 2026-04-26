@@ -224,8 +224,5 @@ int main()
     int arr[] = {10, 50, 60, 40, 25};
     int size = sizeof(arr) / sizeof(arr[0]);
 
-    // printArray(arr, size);
-    // sumOfArray(arr, size);
-    
     return 0;
 }
